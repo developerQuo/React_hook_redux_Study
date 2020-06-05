@@ -11,9 +11,11 @@
 React DOM: 내부에 모든 element를 관리.   
 		    render() 함수를 통해 root Dom node에 렌더링하고, element와 root node를 매개변수로 전달해야 한다.   
 React element: 불변객체. 변경하지않고 새로운 것을 쌓아야 한다.   
-```<pre><code>const element = <div />;</code></pre>```
+```const element = <div />;```   
+   
 React component: React가 사용자정의 component를 발견하면 JSX attr와 children을 단일객체로 전달(props).   
-```<pre><code>const element = <Welcome name="Sara" />;</code></pre>```
+   
+```const element = <Welcome name="Sara" />;```
 + function type: props 사용가능.
 + class type: props, state 사용가능.   
    
