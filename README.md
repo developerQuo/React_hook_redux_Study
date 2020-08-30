@@ -1,6 +1,8 @@
 # React_hook_redux_Study
 
 <h2>React</h2>   
+
+1. 첫번째 원칙. 모든 React 컴포넌트는 자신의 props를 다룰 때 반드시 순수 함수처럼 동작해야 한다. 순수 함수란 매개변수를 변화시키지 않는다.
    
 + 단위: element < component   
    
