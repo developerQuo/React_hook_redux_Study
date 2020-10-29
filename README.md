@@ -3,6 +3,8 @@
 <h2>React</h2>   
 
 1. 첫번째 원칙. 모든 React 컴포넌트는 자신의 props를 다룰 때 반드시 순수 함수처럼 동작해야 한다. 순수 함수란 매개변수를 변화시키지 않는다.
+
+2. 두번째 원칙. 단방향으로 데이터가 흐른다. 해당 방향의 컴포넌트에만 영향을 미친다.
    
 + 단위: element < component   
    
@@ -28,7 +30,26 @@ const element = <Welcome name="Sara" />;
 state & props: 상위 component의 state => 하위 component의 props (top-down, 단방향식)
 + 모든 React component의 매개변수(props)는 수정해서는 안된다.
 
-
+<h3>reactjs.org doc</h3>
++ JSX: JS문법에 마크업을 담은 형태. JSX는 컴파일 후 JS객체로 인식됨. React는 이들을 React Element로 변환하여, 이 객체들을 관리한다.
++ React Element Rendering: React Element는 불변객체로 이를 변경할 수 없다. UI 업데이트를 위해 새로운 엘리먼트를 생성하고 ReactDom에 전달해야 한다.
++ Component & Props
+	** component는 다른 componenet의 함께 출력할 수 있다. 또한 재사용 가능하다.
+	** props는 read only이다. 즉, props를 다룰 때에는 순수함수처럼 동작하도록 해야한다.
++ State & Lifecycle
+	** state는 component에 의해 제어된다.
+	** 동일한 DOM 노드에서 component를 렌더링할 경우, 해당 component의 단일 인스턴스만 사용하므로써 life cycle 기능을 사용할 수 있게 한다.
++ component rendering과 mounting 차이
+	** mounting: Component가 처음 DOM에 rendering
+	** rendering: 
++ 조건부 렌더링
+	** if else
+	** 조건문 ? true일 때 : false일 때
+	** component의 null 반환
++ list와 key
+	** es6와 동일하게 "새로운 배열 = 기존배열.map((item) => logic)"로 표현가능
+	** 이 때, element list라면 key 값을 포함시켜주어야 한다. element의 unique를 지원.
+key로 컴포넌트 추출하기 부터 시작 
 
 <h2>React hook</h2>
 + useState:
@@ -104,4 +125,3 @@ linux 64bit: 스크립트명령어 소스경로 소스암호화옵션 (별도로
 	- 환경설정을 eject 없이 커스터마이징할 수 있고, craco.config.js 파일을 사용한다.
 	- 그 밖에 eslint, babel 등의 환경설정도 가능하다.
 
-<h2>recoil</h2>
