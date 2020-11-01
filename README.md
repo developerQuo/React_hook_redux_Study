@@ -48,8 +48,10 @@ state & props: 상위 component의 state => 하위 component의 props (top-down,
 	** component의 null 반환
 + list와 key
 	** es6와 동일하게 "새로운 배열 = 기존배열.map((item) => logic)"로 표현가능
-	** 이 때, element list라면 key 값을 포함시켜주어야 한다. element의 unique를 지원.
-key로 컴포넌트 추출하기 부터 시작 
+	** 이 때, element list라면 key 값을 포함시켜주어야 한다. element의 unique를 지원. 단, 형제 사이에서만 unique하면된다.
+
++ form
+	** 
 
 <h2>React hook</h2>
 + useState:
