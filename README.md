@@ -51,7 +51,15 @@ state & props: 상위 component의 state => 하위 component의 props (top-down,
 	** 이 때, element list라면 key 값을 포함시켜주어야 한다. element의 unique를 지원. 단, 형제 사이에서만 unique하면된다.
 
 + form
-	** 
+	** 기존 html폼은 submit를 하면 새로운 페이지로 이동.
+	** controlled component: 폼의 값을 제어할 수 있도록 state를 사용. 이 state는 신뢰 가능한 단일 출처가 됨.
+
++ state 끌어올리기
+	** state를 컴포넌트 간에 공통으로 사용하기 위해서는 공통 부모로 state를 끌어올리고, state와 setState()를 prop으로 건네받아 사용할 수 있다.
+
++ 합성 vs 상속
+	** prop으로 전달할 수 있는 것에는 제한이 없다.
+특수화부터
 
 <h2>React hook</h2>
 + useState:
