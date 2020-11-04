@@ -58,8 +58,10 @@ state & props: 상위 component의 state => 하위 component의 props (top-down,
 	** state를 컴포넌트 간에 공통으로 사용하기 위해서는 공통 부모로 state를 끌어올리고, state와 setState()를 prop으로 건네받아 사용할 수 있다.
 
 + 합성 vs 상속
-	** prop으로 전달할 수 있는 것에는 제한이 없다.
-특수화부터
+	** 컴포넌트의 prop으로 전달할 수 있는 것에는 제한이 없다.
+	** 특수화: 더 구체적인 컴포넌트가 일반적인 컴포넌트를 구현.
+	** 합성하여 사용하는 것을 권장.
+React로 사고하기부터
 
 <h2>React hook</h2>
 + useState:
