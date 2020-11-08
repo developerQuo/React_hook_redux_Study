@@ -31,6 +31,7 @@ state & props: 상위 component의 state => 하위 component의 props (top-down,
 + 모든 React component의 매개변수(props)는 수정해서는 안된다.
 
 <h3>reactjs.org doc</h3>
+주요 개념
 + JSX: JS문법에 마크업을 담은 형태. JSX는 컴파일 후 JS객체로 인식됨. React는 이들을 React Element로 변환하여, 이 객체들을 관리한다.
 + React Element Rendering: React Element는 불변객체로 이를 변경할 수 없다. UI 업데이트를 위해 새로운 엘리먼트를 생성하고 ReactDom에 전달해야 한다.
 + Component & Props
@@ -71,8 +72,29 @@ state & props: 상위 component의 state => 하위 component의 props (top-down,
 	2. 공통으로 사용할 수 있는 컴포넌트 찾기 (상위 컴포넌트)
 	3. 공통 컴포넌트에 위치시키거나, 만약 없다면 공통 컴포넌트 만들어서 추가
 
-고급안내서 접근성 프로그래밍적으로 포커스 관리하기 부터
+고급안내서 
++ 접근성 
+	++ 프로그래밍적으로 포커스 관리하기
+		** 마우스 이벤트 사용자에 너무 취중하면 키보드 사용에 편의성을 전혀 고려 못할 수 있다.
+	++ 더 복잡한 위젯
+		** HTML에 맞게 코딩하면 접근성을 쉽게 지원할 수 있다.
 
++ 코드 분할
+	** React.lazy: import를 사용해서 동적으로 컴포넌트를 렌더링 가능. Suspense 컴포넌트 하위에 위치하며, lazy 컴포넌트가 로드 되는 동안 Suspense 컴포넌트는 fallback prop을 렌더링
+
++ Context
+	** 상위 컴포넌트에서 하위 컴포넌트로 깊숙히 전달. 원하는 데이터를 일일이 전달할 필요가 없음.
+	** redux 와 기능이 유사.
+
++ Error Boundary
+	** js 에러가 app을 중단시키는 것을 방지한다. js 에러 발생 -> error 기록 -> fallback UI 반환
+
+고급안내서 중단. (api 참고서, hook 완료하고) Ref 전달하기 부터 시작
+
+API 참고서
++ React
+	** 컴포넌트: UI를 독립적으로, 재사용 가능하게 만듦.
+	** Suspense: 다른작업을 기다릴 수 있음. lazy와 단짝.
 
 <h2>React hook</h2>
 + useState:
