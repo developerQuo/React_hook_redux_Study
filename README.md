@@ -95,6 +95,17 @@ API 참고서
 + React
 	** 컴포넌트: UI를 독립적으로, 재사용 가능하게 만듦.
 	** Suspense: 다른작업을 기다릴 수 있음. lazy와 단짝.
+	** memo: 렌더링 결과를 memorizing하여 재사용한다. prop의 변화가 있을 경우만 다시 렌더링한다. 성능 최적화를 목적으로 사용.
+
++ React.Component
+	** setState: 갱신된 state를 사용해야한다고 요청. 즉각적으로 반영되지는 않을 수 있음. setState의 즉각적인 갱신효과를 보고싶다면 콜백함수로 구현.
+	** props: 컴포넌트를 호출한 곳에서 정의한 props를 포함. props.children은 JSX 표현으로 된 자식태그로 정의되는 경우가 많음.
+	** state: 시간이 지남에 따라 값이 변화할 수 있는 특정 컴포넌트에 한정해서 사용되는 데이터. state를 직접변경하면 안되고 setState() 함수를 활용해야한다.  immutable data로 취급.
+
++ ReactDOM
+	** render(): 전달받은 React 엘리먼트를 container DOM에 렌더링. 이미 React 엘리먼트가 렌더링되어 있다면 container를 나두고 container 하위노드만 수정.
+
+
 
 <h2>React hook</h2>
 + useState:
