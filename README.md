@@ -105,6 +105,16 @@ API 참고서
 + ReactDOM
 	** render(): 전달받은 React 엘리먼트를 container DOM에 렌더링. 이미 React 엘리먼트가 렌더링되어 있다면 container를 나두고 container 하위노드만 수정.
 
++ DOM 엘리먼트
+	** React는 독립적인 DOM 시스템을 구현.
+	** HTML과의 attribute 차이
+		1. className: CSS class 사용 (권장)
+		2. style: 캐멀케이스로 CSS 스타일링 (보조 사용)
+
++ 합성 이벤트
+	** 이벤트를 동일하게 처리하기 위해 SyntheticEvent 객체를 전달받음.
+
+Focus 이벤트 부터
 
 
 <h2>React hook</h2>
