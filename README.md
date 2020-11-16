@@ -120,8 +120,26 @@ API 참고서
 	** SPA(single-page application): 하나의 HTML페이지와 애플리케이션 실행에 사용되는 모든 자원을 로드. 페이지의 상호작용으로 페이지가 다시 로드되진 않는다.  기존 웹사이트와 함께 사용이 가능.
 	** 컴파일러: 코드를 변환하여 다른형식으로 코드를 반환. 일반적으로 구형 브라이저에서 최신 문법을 사용할 수 있도록 도와준다. ex) Babel
 	** 번들러: 분리된 JS와 CSS 모듈코드를 브라우저에 최적화된 여러 개의 파일로 결합. ex) Webpack
+	** 패키지 관리자: 프로젝트의 종속성 관리. ex) npm, yarn
+	** CDN: 전 세계 서버 네트워크에서 캐시된 정적 콘텐츠 제공.
+	** JSX: js의 확장 문법으로 js의 기능들을 모두 사용 가능. React DOM은 HTML attribute 대신 camelCase로 네이밍 컨벤션 사용. ex) tabindex -> tabIndex
+	** element: React application을 구성하는 불변 객체.
+	** component: 페이지에 렌더링할 element를 반환하는 재사용 가능한 코드 조각. 기능별로 나눌 수 있고, 다른 컴포넌트 안에서 사용 가능. 항상 대문자로 시작한다.
+	** props: component의 입력값. readonly
+	** props.children: component의 여는 태그와 닫는 태그 사이에 포함되는 내용.
+	** state: component 내부에서 관리. -> 값 변경 가능. 하나의 component에서만 해당 state를 관리해야 한다.
+	** Lifecycle method: component의 각각의 단계에서 실행되는 커스텀 기능. 
+		** mounting: component가 생성되고 DOM에 삽입될 때.
+		** unmounted: component가 업데이트되고 DOM에서 해제, 제거될 때.
+	** 제어 vs 비제어 컴포넌트: form 입력 방식.
+		** 제어: React에 의해 입력값이 제어. 사용자가 데이터 입력 -> 변경 이벤트 핸들러 호출 -> 입력의 유효 여부 결정 -> 렌더링 or 상태유지
+		** 비제어: React의 관여 X. 사용자가 데이터 입력 -> 엘리먼트에 반영
+	** Key: element 배열을 만들 때 포함해야 하는 문자열로, React가 같은 배열내의 element간 식별이 가능하도록 돕는다. random 값을 key로 사용하면 rerendering 과정에서 안정적으로 식별하기 힘들 수 있다.
+	** Ref: component의 인스턴스나 DOM element에 직접 접근 가능. 하지만 사용을 지양한다.
+	** 이벤트: camelCase를 사용. 함수로 이벤트 핸들러를 전달.
+	** 재조정(Reconciliation): component의 state나 props가 변경되면 이전에 렌더링된 component와 비교하여 실제 DOM을 업데이트할지 결정.
 
-패키지 관리자부터
+HOOK부터
 
 
 <h2>React hook</h2>
