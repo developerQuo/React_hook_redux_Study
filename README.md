@@ -139,8 +139,18 @@ API 참고서
 	** 이벤트: camelCase를 사용. 함수로 이벤트 핸들러를 전달.
 	** 재조정(Reconciliation): component의 state나 props가 변경되면 이전에 렌더링된 component와 비교하여 실제 DOM을 업데이트할지 결정.
 
-HOOK부터
+HOOK
++ Hook 소개: 함수 component에서 React state와 생명주기 기능(lifecycle features)을 연동할 수 있게 해주는 함수.
+	** class와 hook을 같이 사용할 수 있다.
+	** Hook 개요
+		** State Hook: component가 다시 렌더링 되어도 state를 유지.
+		** Effect Hook: component 안에서 데이터 가져오고 구독하기, DOM 직접조작하기 모두를 side effects라고 부른다. => useEffect에서 모두 수행 (렌더링 이후에 effects를 실행)
+		** 사용규칙 - lint plugin 등으로 사용을 강제할 수 있음.
+			** 반복문, 조건문, 중첩된 함수 내에서 Hook 실행 불가.
+			** React 함수 component, custom Hook에서만 호출.
+		** custom Hook: 각각의 Hook은 완전히 독립적. 상태 관련 로직만을 재사용.
 
+HOOK State Hook 사용하기부터
 
 <h2>React hook</h2>
 + useState:
